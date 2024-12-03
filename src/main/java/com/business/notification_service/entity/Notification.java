@@ -16,8 +16,12 @@ public class Notification {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "type")
-    private String type;
+//    @Column(name = "type")
+//    private String type;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "type", nullable = false)
+    private NotificationType notificationType;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "send_at")
@@ -30,10 +34,10 @@ public class Notification {
 
     }
 
-    public Notification(Integer id, String content, String type, LocalDateTime sendAt, Integer bookingId) {
+    public Notification(Integer id, String content, NotificationType notificationType, LocalDateTime sendAt, Integer bookingId) {
         this.id = id;
         this.content = content;
-        this.type = type;
+        this.notificationType = notificationType;
         this.sendAt = sendAt;
         this.bookingId = bookingId;
     }
@@ -54,12 +58,12 @@ public class Notification {
         this.content = content;
     }
 
-    public String getType() {
-        return type;
+    public NotificationType getNotificationType() {
+        return notificationType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setNotificationType(NotificationType notificationType) {
+        this.notificationType = notificationType;
     }
 
     public LocalDateTime getSendAt() {
