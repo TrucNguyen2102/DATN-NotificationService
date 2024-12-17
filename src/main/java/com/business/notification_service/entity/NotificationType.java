@@ -4,7 +4,9 @@ public enum NotificationType {
     BOOKING_CONFIRMATION("Xác nhận đặt bàn"),
     BOOKING_REMINDER("Nhắc nhở đặt bàn"),
 //    CANCELLATION_WARNING("Cảnh báo hủy"),
-    AUTO_CANCELLATION("Tự động hủy");
+    AUTO_CANCELLATION("Tự động hủy"),
+
+    POLICY_VIOLATION("Vi phạm chính sách đặt bàn");
 
     private final String messageContent;
 

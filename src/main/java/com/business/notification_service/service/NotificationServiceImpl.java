@@ -78,10 +78,15 @@ public class NotificationServiceImpl implements NotificationService{
                                 "Bạn vui lòng chú ý thời gian.",
                         "Thời gian đặt bàn từ Booking Service"
                 );
+            case POLICY_VIOLATION:
+                return "Chào bạn, tài khoản của bạn bị khóa do vi phạm chính sách đặt bàn của chúng tôi. \n\n" +
+                        "Bạn có thể tiếp tục sử dụng dịch vụ sau 3 ngày. \n\n" +
+                        "Xin lỗi và cảm ơn bạn đã hiểu.";
             case AUTO_CANCELLATION:
                 return "Hệ thống tự động hủy đơn đặt bàn do đã hết thời gian giữ bàn.\n\n" +
                             "Nếu bạn muốn đặt bàn lại, vui lòng thực hiện đặt lại trên trang web của chúng tôi.\n\n" +
                             "Xin lỗi vì sự bất tiện này và cảm ơn bạn đã hiểu.";
+
             default:
                 throw new IllegalStateException("Unexpected notification type: " + notification.getNotificationType());
         }
