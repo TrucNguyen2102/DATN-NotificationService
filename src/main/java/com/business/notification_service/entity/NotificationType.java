@@ -1,12 +1,12 @@
 package com.business.notification_service.entity;
 
 public enum NotificationType {
-    BOOKING_CONFIRMATION("Xác nhận đặt bàn"),
-    BOOKING_REMINDER("Nhắc nhở đặt bàn"),
+    BOOKING_CONFIRMATION("XÁC NHẬN ĐẶT BÀN"),
+    BOOKING_REMINDER("NHẮC NHỞ ĐẶT BÀN"),
 //    CANCELLATION_WARNING("Cảnh báo hủy"),
-    AUTO_CANCELLATION("Tự động hủy"),
+    AUTO_CANCELLATION("TỰ ĐỘNG HỦY"),
 
-    POLICY_VIOLATION("Vi phạm chính sách đặt bàn");
+    POLICY_VIOLATION("VI PHẠM CHÍNH SÁCH ĐẶT BÀN");
 
     private final String messageContent;
 
